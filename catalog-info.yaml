@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: pui9cfnhd-python-gitops
+  description: This is GitOps manifest for pui9cfnhd-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: pui9cfnhd-python
+    janus-idp.io/tekton: pui9cfnhd-python 
+    backstage.io/kubernetes-id: pui9cfnhd-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:pui9cfnhd-python
